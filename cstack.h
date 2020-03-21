@@ -4,19 +4,21 @@
 extern "C" {
 #endif
 
+#include <stdbool.h>
+
 struct _Stack{
 	int *button;
 	int top;
 	int maxSize;
 };
-typedef _Stack Stack;
+typedef struct _Stack Stack;
 
 bool isFull(Stack *s);
 bool isEmpty(Stack *s);
 unsigned int size(Stack *s);
 void init(Stack **s, int n);
 void destroy(Stack **s);
-void extend(Stack *s, int extSz=0);
+void extend(Stack *s, int extSz);
 void push(Stack **s, int val);
 void pop(Stack *s);
 int get(Stack *s);

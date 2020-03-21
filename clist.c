@@ -60,7 +60,7 @@ void printList(Node *head)
 	printf("NULL\n");
 }
 
-void destroy(List **list)
+void destroyList(List **list)
 {
 	List *li = *list;
 	if(li == NULL)

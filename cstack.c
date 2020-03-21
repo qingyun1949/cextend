@@ -1,6 +1,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
+
 #include "cstack.h"
 
 bool isFull(Stack *s)
@@ -74,7 +75,7 @@ void push(Stack **s, int val)
 	Stack *st = *s;
 		
 	if(isFull(st))
-		extend(st);
+		extend(st, 100);
 
 
 	st->button[++(st->top)] = val;

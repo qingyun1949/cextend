@@ -10,7 +10,7 @@ struct ListNode{
 	struct ListNode *next;
 };
 
-typedef ListNode Node;
+typedef struct ListNode Node;
 
 typedef struct List{
 	Node *head;
@@ -22,7 +22,7 @@ Node *reverseList(Node *head);
 Node *recursiveReverse(Node *head);
 Node *appendNode(Node *head, int val);
 void printList(Node *head);
-void destroy(List *list);
+void destroyList(List **list);
 
 
 
