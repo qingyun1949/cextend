@@ -1,0 +1,28 @@
+#ifndef __CSTACK_H__
+#define __CSTACK_H__
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+struct _Stack{
+	int *button;
+	int top;
+	int maxSize;
+};
+typedef _Stack Stack;
+
+bool isFull(Stack *s);
+bool isEmpty(Stack *s);
+unsigned int size(Stack *s);
+void init(Stack **s, int n);
+void destroy(Stack **s);
+void extend(Stack *s, int extSz=0);
+void push(Stack **s, int val);
+void pop(Stack *s);
+int get(Stack *s);
+void printStack(Stack *s);
+void reverse(Stack *s);
+#ifdef __cplusplus
+}
+#endif
+#endif
